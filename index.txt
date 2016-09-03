@@ -7,3 +7,4 @@ SMZ Set Matrix Zeroes
 MS Maximal Square
 RL Reorder List
 SUN Super Ugly Number
+Sqrt Sqrt(x)
