@@ -8,4 +8,4 @@ MS Maximal Square
 RL Reorder List
 SUN Super Ugly Number
 Sqrt Sqrt(x)
-UBSt Unique Binary Search Trees
+UBST Unique Binary Search Trees
