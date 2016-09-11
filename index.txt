@@ -17,3 +17,4 @@ CCTN Count Complete Tree Nodes
 BTRSV Binary Tree Right Side View
 BaC Bulls and Cows
 RDfSL Remove Duplicates from Sorted List
+FUCiaS First Unique Character in a String
