@@ -13,4 +13,4 @@ BAoNR Bitwise AND of Numbers Range
 PoAES Product of Array Except Self
 BTIT Binary Tree Inorder Traversal
 BTPT Binary Tree Preorder Traversal
-Count Complete Tree Nodes
+CCTN Count Complete Tree Nodes
