@@ -20,3 +20,4 @@ RDfSL Remove Duplicates from Sorted List
 FUCiaS First Unique Character in a String
 MSu Maximum Subarray
 CP Count Primes
+LLRN Linked List Random Node
