@@ -39,7 +39,7 @@
         
         length = 1;
         while (temp != null){
-            if (length++ == rand.nextInt(length)) answer = temp;
+            if (0 == rand.nextInt(++length)) answer = temp;
             temp = temp.next;
         }
         
