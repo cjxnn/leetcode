@@ -10,7 +10,7 @@ public class Solution {
         
         for (int i = 1; i < nums.length; i++){
             running = running > 0 ? running + nums[i] : nums[i];
-            max = Math.max(max, running);
+            if (running > max) max = running;
         }
         
         return max;
