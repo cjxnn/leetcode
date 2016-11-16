@@ -27,22 +27,30 @@ public class Solution {
             return new int[] {nums[s], nums[s], nums[s], nums[s]};
         }
         else{
-            int mid = (s + f)/2;
+			int mid = (s + f)/2;
             int[] a = maxSubArray(nums, s, mid);
             int[] b = maxSubArray(nums, mid + 1, f);
             
-            a[0] = Math.max(a[0], a[3] + b[0]);
-
-            a[1] = Math.max(a[1], b[1]);
-            if (a[2] > 0 && b[0] > 0)
-                a[1] = Math.max(a[1], a[2] + b[0]);
-            else
-                a[1] = Math.max(a[1], Math.max(a[2], b[0]));
+            mid = a[2] + b[0];
+            if (a[1] < mid)
+                a[1] = mid;
+            if (a[1] < b[1])
+                a[1] = b[1];
+            if (a[1] < a[2])
+                a[1] = a[2];
+            if (a[1] < b[0])
+                a[1] = b[0];
             
-            a[2] = Math.max(b[2], b[3] + a[2]);
+            b[0] += a[3];
+            if (a[0] < b[0])
+                a[0] = b[0];
+                
+            a[2] += b[3];
+            if (a[2] < b[2])
+                a[2] = b[2];
             
             a[3] += b[3];
-            
+                
             return a;
         }
     }
