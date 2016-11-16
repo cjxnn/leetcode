@@ -5,27 +5,26 @@
 
 public class Solution {
     public int countPrimes(int n) {
-        if (n < 3)
+        if (n < 3){
             return 0;
-            
-        if (n == 3)
-            return 1;
-            
-        int count = 1, composite = 0;
-        boolean[] numbers = new boolean[n - 3];
-        
-        for (int i = 0; i < n - 3; i += 2){
-            if (!numbers[i]){
-                count++;
-                
-                composite = 3 * i + 6;
-                while (composite < n - 3){
-                    numbers[composite] = true;
-                    composite += 2 * i + 6;
-                }
-            }
         }
-        
-        return count;
+        else{
+            int tmp, start = 0, prime = 0, number = 1;
+            boolean[] numbers = new boolean[n/2 - 1];
+            while (start < numbers.length){
+                while (numbers[start]){
+                    start++;
+                    if (start == numbers.length)
+                        return number;
+                }
+                number++;
+                prime = 2 * start + 3;
+                
+                for(tmp = start; tmp < numbers.length; tmp += prime)
+                    numbers[tmp] = true;
+            }
+            
+            return number;
+        }
     }
 }
